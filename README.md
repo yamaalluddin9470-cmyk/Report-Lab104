@@ -107,10 +107,10 @@ display(plot_bloch_multivector(state0))
 display(plot_bloch_multivector(state1))
 ```
 
-| State | Statevector output | Bloch vector |
+| State | Statevector output | Bloch sphere |
 |---|---|---|
-| $\lvert0\rangle$ | `[1.+0.j, 0.+0.j]` | $(0,0,1)$ — north pole |
-| $\lvert1\rangle$ | `[0.+0.j, 1.+0.j]` | $(0,0,-1)$ — south pole |
+| $\lvert0\rangle$ | `[1.+0.j, 0.+0.j]` | <img src="images/bloch-0.png" width="260"> |
+| $\lvert1\rangle$ | `[0.+0.j, 1.+0.j]` | <img src="images/bloch-1.png" width="260"> |
 
 **Observation:** $\lvert0\rangle$ has Bloch vector $(0,0,1)$ and points to the north pole ($\theta=0$). $\lvert1\rangle$ has Bloch vector $(0,0,-1)$ and points to the south pole ($\theta=\pi$). The $X$ gate moved the state from one pole to the other. Measuring gives $P(0)=1$ for $\lvert0\rangle$ and $P(1)=1$ for $\lvert1\rangle$.
 
@@ -127,10 +127,10 @@ display(plot_bloch_multivector(state_plus))
 display(plot_bloch_multivector(state_minus))
 ```
 
-| State | Dirac form (by hand) | Statevector output | Bloch vector |
+| State | Dirac form (by hand) | Statevector output | Bloch sphere |
 |---|---|---|---|
-| $\lvert+\rangle$ | $\frac1{\sqrt2}(\lvert0\rangle+\lvert1\rangle)$ | `[0.7071+0.j, 0.7071+0.j]` | $(1,0,0)$ |
-| $\lvert-\rangle$ | $\frac1{\sqrt2}(\lvert0\rangle-\lvert1\rangle)$ | `[0.7071+0.j, -0.7071+0.j]` | $(-1,0,0)$ |
+| $\lvert+\rangle$ | $\frac1{\sqrt2}(\lvert0\rangle+\lvert1\rangle)$ | `[0.7071+0.j, 0.7071+0.j]` | <img src="images/bloch-plus.png" width="260"> |
+| $\lvert-\rangle$ | $\frac1{\sqrt2}(\lvert0\rangle-\lvert1\rangle)$ | `[0.7071+0.j, -0.7071+0.j]` | <img src="images/bloch-minus.png" width="260"> |
 
 **Hand calculation:**
 
@@ -161,6 +161,8 @@ plot_bloch_multivector(state)
 
 **Hand calculation:** $R_y(\lambda)\lvert0\rangle = \cos\frac\lambda2\lvert0\rangle + \sin\frac\lambda2\lvert1\rangle$, so with $\lambda=\pi/3$: $\alpha=\cos30° = \frac{\sqrt3}2,\ \beta=\sin30°=\frac12$.
 
+<img src="images/bloch-task4-ry-pi3.png" width="320">
+
 | Quantity | Hand calculation | Qiskit result |
 |---|---|---|
 | $\alpha$ | $\frac{\sqrt3}2 \approx 0.866$ | 0.866 |
@@ -189,6 +191,8 @@ state = Statevector.from_instruction(qc)
 print(state)
 display(plot_bloch_multivector(state))
 ```
+
+<img src="images/bloch-ex1-theta-pi4-phi-pi2.png" width="320">
 
 **Observation:** Qiskit gave `[0.6533-0.6533j, 0.2706+0.2706j]` with $P(0)=0.854, P(1)=0.146$ and Bloch vector $(0, 0.707, 0.707)$, matching the expected values. The amplitudes differ from the hand form by a factor $e^{-i\pi/4}$: Qiskit's $R_z(\lambda) = \mathrm{diag}(e^{-i\lambda/2}, e^{i\lambda/2})$ includes a global phase. A global phase does not change the physical state (see Exercise 3), and the relative phase of $\lvert1\rangle$ to $\lvert0\rangle$ is still $e^{i\pi/2}$.
 
@@ -243,11 +247,11 @@ for gate in ["rx", "ry", "rz"]:
     display(plot_bloch_multivector(state))
 ```
 
-| Gate applied to $\lvert0\rangle$ | Statevector | Final Bloch vector $(x,y,z)$ |
-|---|---|---|
-| $R_x(\pi/2)$ | `[0.7071+0.j, 0-0.7071j]` | $(0, -1, 0)$ |
-| $R_y(\pi/2)$ | `[0.7071+0.j, 0.7071+0.j]` | $(1, 0, 0)$ |
-| $R_z(\pi/2)$ | `[0.7071-0.7071j, 0+0j]` | $(0, 0, 1)$ |
+| Gate applied to $\lvert0\rangle$ | Statevector | Final Bloch vector $(x,y,z)$ | Bloch sphere |
+|---|---|---|---|
+| $R_x(\pi/2)$ | `[0.7071+0.j, 0-0.7071j]` | $(0, -1, 0)$ | <img src="images/bloch-ex4-rx-pi2.png" width="220"> |
+| $R_y(\pi/2)$ | `[0.7071+0.j, 0.7071+0.j]` | $(1, 0, 0)$ | <img src="images/bloch-ex4-ry-pi2.png" width="220"> |
+| $R_z(\pi/2)$ | `[0.7071-0.7071j, 0+0j]` | $(0, 0, 1)$ | <img src="images/bloch-ex4-rz-pi2.png" width="220"> |
 
 **Observation:** $R_x(\pi/2)$ rotates the north pole by 90° about $x$ and ends at $-y$. $R_y(\pi/2)$ rotates it about $y$ and ends at $+x$. $R_z(\pi/2)$ leaves the state at the north pole, because $\lvert0\rangle$ already lies on the $z$ axis, the rotation axis. Its only effect is a global phase $e^{-i\pi/4}$, which is unobservable. This shows that $R_z$ only changes $\varphi$ and cannot move a state that sits on the $z$ axis.
 
