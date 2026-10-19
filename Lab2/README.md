@@ -12,7 +12,7 @@
 | Instructor | Komsan Kanjanasit |
 | Date Performed | 2026-10-19 |
 | Date Submitted | TBD |
-| Colab Notebook | https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab2/Lab2_Quantum_Gates.ipynb |
+| Colab Notebook | https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab2/lab-2-quantum-gates.ipynb |
 
 ---
 
@@ -101,7 +101,7 @@ backend = Aer.get_backend("aer_simulator")
 SHOTS, SEED = 1024, 42
 ```
 
-**Observation:** All packages imported successfully. The system Python 3.9 used in Lab 1 did not have `qiskit-aer`, so the lab was run in a new virtual environment with Python 3.14, which also removes the Python 3.9 deprecation warning. A fixed `seed_simulator` makes the measurement counts reproducible. The notebook uses two helpers: `bloch(sv)`, which returns the Bloch vector $(\langle X\rangle, \langle Y\rangle, \langle Z\rangle)$, and `counts(qc)`, which runs a circuit on the simulator.
+**Observation:** All packages imported successfully. The system Python 3.9 used in Lab 1 did not have `qiskit-aer`, so the lab was run in a new virtual environment with Python 3.14, which also removes the Python 3.9 deprecation warning. A fixed `seed_simulator` makes the measurement counts reproducible. The notebook uses two helpers: `bloch(sv)`, which returns the Bloch vector $(\langle X\rangle, \langle Y\rangle, \langle Z\rangle)$, and `counts(qc)`, which runs a circuit on the simulator. Figures are drawn through `bloch_plot` and `hist_plot`, which lower the Bloch-sphere viewing angle from Qiskit's default 30° to 20° and keep the histogram labels upright instead of rotated by 70°.
 
 ### Task 2 — Pauli Gates
 
@@ -422,7 +422,7 @@ In this lab, all basic gates were confirmed to be unitary, and their effects on 
 
 ## Appendix — Full Code
 
-The complete, runnable code is in the notebook [Lab2_Quantum_Gates.ipynb](Lab2_Quantum_Gates.ipynb) (Colab link in the header table). Each figure in this report is saved by the notebook to `images/` under the same file name.
+The complete, runnable code is in the notebook [lab-2-quantum-gates.ipynb](lab-2-quantum-gates.ipynb) (Colab link in the header table). Each figure in this report is saved by the notebook to `images/` under the same file name.
 
 ---
 
