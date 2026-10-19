@@ -11,7 +11,7 @@
 | Major | AISE |
 | Instructor | Komsan Kanjanasit |
 | Date Performed | 2026-10-19 |
-| Date Submitted | TBD |
+| Date Submitted | 2026-10-20 |
 | Colab Notebook | https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab2/lab-2-quantum-gates.ipynb |
 
 ---
