@@ -4,7 +4,8 @@
 **Course:** Quantum Computation, Lab 3
 **Date:** 3 November 2026
 **Tools:** Qiskit 2.6.1, Qiskit Aer 0.18.2 (`aer_simulator`), 1024 shots, simulator seed 42
-**Code:** [`lab-3-quantum-register.ipynb`](lab-3-quantum-register.ipynb)
+**Code:** [`lab-3-quantum-register.ipynb`](lab-3-quantum-register.ipynb)  
+**Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab3/lab-3-quantum-register.ipynb)
 
 ---
 
