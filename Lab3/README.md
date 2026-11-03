@@ -1,6 +1,6 @@
 # Lab 3 Report: Basic Quantum Registers
 
-**Student:** ยามาอัลลุดดีน เจ๊ะหามะ (Ang), AISE Cohort 3, College of Computing, PSU Phuket
+**Student:** ยามาอัลลุดดีน เจ๊ะหามะ , AISE Cohort 3, College of Computing, PSU Phuket
 **Course:** Quantum Computation, Lab 3
 **Date:** 3 November 2026
 **Tools:** Qiskit 2.6.1, Qiskit Aer 0.18.2 (`aer_simulator`), 1024 shots, simulator seed 42
