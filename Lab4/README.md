@@ -1,9 +1,13 @@
 # Lab 4: Basic Quantum Circuits — Report
 
 **Student:** ยามาอัลลุดดีน เจ๊ะหามะ  
+
 **Program:** AISE, College of Computing, Prince of Songkla University (Phuket Campus)  
+
 **Tools:** Python, Qiskit 2.6.1, Qiskit Aer 0.18.2, Google Colab  
+
 **Notebook:** [`lab-4-quantum-circuit.ipynb`](lab-4-quantum-circuit.ipynb)  
+
 **Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab4/lab-4-quantum-circuit.ipynb)
 
 ---
