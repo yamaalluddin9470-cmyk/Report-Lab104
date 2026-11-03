@@ -16,7 +16,7 @@
 - จำลองวงจรด้วย **Qiskit Aer** และตีความผล
 - แสดงภาพวงจร, statevector และ histogram ของการวัด
 
-## 2. Background (สรุปสั้น)
+## 2. Background
 
 Quantum circuit คือลำดับของ quantum gate ที่กระทำกับคิวบิต แล้ว (มัก) ตามด้วยการวัด
 
