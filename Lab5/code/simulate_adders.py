@@ -5,7 +5,8 @@ from pathlib import Path
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
 
-OUT = Path(__file__).parent
+OUT = Path(__file__).resolve().parent.parent / "data"
+OUT.mkdir(parents=True, exist_ok=True)
 SIM = AerSimulator()
 SHOTS = 1024
 
