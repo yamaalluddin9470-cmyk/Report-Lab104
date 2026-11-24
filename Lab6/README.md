@@ -42,7 +42,7 @@ The transform changes a representation from the computational or time domain to 
 
 The QFT acts on an $n$-qubit computational basis state $\lvert j\rangle$ as
 
-$$\operatorname{QFT}_N\lvert j\rangle=\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}e^{2\pi i jk/N}\lvert k\rangle,\qquad N=2^n.$$
+$$\mathrm{QFT}_N\lvert j\rangle=\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}e^{2\pi i jk/N}\lvert k\rangle,\qquad N=2^n.$$
 
 The output probabilities of a basis-state input are equal, but the amplitudes contain phase information that depends on the input integer $j$. This phase information becomes useful when QFT is combined with other quantum operations.
 
@@ -60,7 +60,7 @@ For an $n$-qubit QFT, the number of Hadamard gates is $n$, the number of control
 
 The controlled-phase gate is
 
-$$CP(\theta)=\operatorname{diag}(1,1,1,e^{i\theta}).$$
+$$CP(\theta)=\mathrm{diag}(1,1,1,e^{i\theta}).$$
 
 In the QFT circuit, the required angles are powers of two, such as $\pi/2$, $\pi/4$ and $\pi/8$. These gates do not change computational-basis probabilities by themselves; they change relative phases between amplitudes.
 
@@ -155,7 +155,7 @@ for i in range(8):
 
 For input $\lvert000\rangle$, the theoretical output is
 
-$$\operatorname{QFT}_8\lvert000\rangle=\frac{1}{\sqrt8}(\lvert000\rangle+\lvert001\rangle+\cdots+\lvert111\rangle).$$
+$$\mathrm{QFT}_8\lvert000\rangle=\frac{1}{\sqrt8}(\lvert000\rangle+\lvert001\rangle+\cdots+\lvert111\rangle).$$
 
 The statevector simulation gave eight amplitudes of approximately $0.3536$, since $1/\sqrt8\approx0.3536$:
 
