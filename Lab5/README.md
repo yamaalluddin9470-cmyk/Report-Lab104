@@ -8,6 +8,10 @@
 **สังกัด:** College of Computing, PSU Phuket  
 **วันที่ทดลอง:** 24 พฤศจิกายน 2569
 
+### ไฟล์สำหรับตรวจสอบโค้ด
+
+[เปิดไฟล์ Google Colab](https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab5/notebooks/Lab5_Quantum_Adders_Colab.ipynb) · [ดูไฟล์ Notebook บน GitHub](notebooks/Lab5_Quantum_Adders_Colab.ipynb)
+
 ## 1. บทนำ
 
 Quantum Adder เป็นวงจรควอนตัมสำหรับการบวกเลขโดยใช้การดำเนินการแบบย้อนกลับได้ (reversible operations) ซึ่งแตกต่างจากวงจรคลาสสิกทั่วไปที่อาจทำลายข้อมูลอินพุตระหว่างการคำนวณ การทดลองนี้ศึกษาหลักการของ Half Adder และส่งวงจรไปทำงานบน QPU จริงของ IBM Quantum เพื่อเปรียบเทียบผลการวัดกับผลทางทฤษฎี โดยมีผลฮาร์ดแวร์จริงสำหรับอินพุต `11` และ `00`
