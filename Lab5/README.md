@@ -46,11 +46,11 @@ Carry = a \land b
 
 สำหรับการทดลองนี้ใช้ (a=1) และ (b=1) โดยเตรียมอินพุตด้วย X gate จากนั้นใช้ CNOT สองตัวคำนวณ Sum และใช้ Toffoli คำนวณ Carry
 
-ไฟล์วงจรต้นฉบับ: [composer-2026-11-24_11-24.qasm](composer-2026-11-24_11-24.qasm)
+ไฟล์วงจรต้นฉบับ: [composer-2026-11-24_11-24.qasm](qasm/composer-2026-11-24_11-24.qasm)
 
-ไฟล์ Google Colab สำหรับตรวจสอบโค้ด: [Lab5_Quantum_Adders_Colab.ipynb](Lab5_Quantum_Adders_Colab.ipynb)
+ไฟล์ Google Colab สำหรับตรวจสอบโค้ด: [Lab5_Quantum_Adders_Colab.ipynb](notebooks/Lab5_Quantum_Adders_Colab.ipynb)
 
-![วงจร Half Adder](composer.png)
+![วงจร Half Adder](figures/composer.png)
 
 ## 5. ผลทางทฤษฎี
 
@@ -84,7 +84,7 @@ Carry = 1 \land 1 = 1
 | จำนวน shots | 1,024 |
 | อินพุต | (a=1,b=1) |
 
-Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simulator โดยข้อมูลต้นฉบับอยู่ในโฟลเดอร์ [job-dc2h62anj2vs73dgnoag-2](job-dc2h62anj2vs73dgnoag-2/)
+Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simulator โดยข้อมูลต้นฉบับอยู่ในโฟลเดอร์ [job-dc2h62anj2vs73dgnoag-2](jobs/job-dc2h62anj2vs73dgnoag-2/)
 
 ### 6.2 วงจรหลังการ Transpile
 
@@ -99,7 +99,7 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 
 วงจรถูกแตกเป็นเกตพื้นฐาน เช่น RZ, RX, SX และเกตสองคิวบิต ก่อนทำการวัดผล
 
-![Transpiled circuit](circuit-dc2h62anj2vs73dgnoag.png)
+![Transpiled circuit](figures/circuit-dc2h62anj2vs73dgnoag.png)
 
 ## 7. ผลการทดลอง
 
@@ -122,7 +122,7 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 | `1000` | 1 | 0.098% |
 | `1110` | 1 | 0.098% |
 
-![Probability result](probabilities.png)
+![Probability result](figures/probabilities.png)
 
 ผลลัพธ์ที่ถูกต้องคือ `1011` ซึ่งพบ 913 ครั้ง คิดเป็น **89.160%** ส่วนผลลัพธ์อื่นรวมกัน 111 ครั้ง คิดเป็น **10.840%**
 
@@ -141,11 +141,11 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 | ผลลัพธ์หลัก | `0000` จำนวน 961 ครั้ง |
 | Probability ของผลลัพธ์หลัก | 93.848% |
 
-ผลลัพธ์อื่นรวม 63 ครั้ง หรือ 6.152% ซึ่งสะท้อน noise และ readout error ของ QPU จริง ไฟล์ counts อยู่ที่ [half_adder_00_qpu_counts.csv](half_adder_00_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2k8teq4uuc73a5f1tg](job-dc2k8teq4uuc73a5f1tg/)
+ผลลัพธ์อื่นรวม 63 ครั้ง หรือ 6.152% ซึ่งสะท้อน noise และ readout error ของ QPU จริง ไฟล์ counts อยู่ที่ [half_adder_00_qpu_counts.csv](data/half_adder_00_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2k8teq4uuc73a5f1tg](jobs/job-dc2k8teq4uuc73a5f1tg/)
 
-![Half Adder 00 transpiled circuit](circuit-dc2k8teq4uuc73a5f1tg.png)
+![Half Adder 00 transpiled circuit](figures/circuit-dc2k8teq4uuc73a5f1tg.png)
 
-![Half Adder 00 bit excitation result](job_dc2k8teq4uuc73a5f1tg_results_c_excitation.png)
+![Half Adder 00 bit excitation result](figures/job_dc2k8teq4uuc73a5f1tg_results_c_excitation.png)
 
 ### 7.2 ผล Half Adder บน QPU จริง: อินพุต `01`
 
@@ -160,9 +160,9 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 | ผลลัพธ์หลัก | `0110` จำนวน 948 ครั้ง |
 | Probability ของผลลัพธ์หลัก | 92.578% |
 
-ผลลัพธ์อื่นรวม 76 ครั้ง หรือ 7.422% ไฟล์ counts อยู่ที่ [half_adder_01_qpu_counts.csv](half_adder_01_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2kd5uq4uuc73a5f920](job-dc2kd5uq4uuc73a5f920/)
+ผลลัพธ์อื่นรวม 76 ครั้ง หรือ 7.422% ไฟล์ counts อยู่ที่ [half_adder_01_qpu_counts.csv](data/half_adder_01_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2kd5uq4uuc73a5f920](jobs/job-dc2kd5uq4uuc73a5f920/)
 
-![Half Adder 01 transpiled circuit](circuit-dc2kd5uq4uuc73a5f920.png)
+![Half Adder 01 transpiled circuit](figures/circuit-dc2kd5uq4uuc73a5f920.png)
 
 ### 7.3 ผล Half Adder บน QPU จริง: อินพุต `10`
 
@@ -177,11 +177,11 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 | ผลลัพธ์หลัก | `0101` จำนวน 943 ครั้ง |
 | Probability ของผลลัพธ์หลัก | 92.090% |
 
-ผลลัพธ์อื่นรวม 81 ครั้ง หรือ 7.910% ไฟล์ counts อยู่ที่ [half_adder_10_qpu_counts.csv](half_adder_10_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2kf9mq4uuc73a5fcc0](job-dc2kf9mq4uuc73a5fcc0/)
+ผลลัพธ์อื่นรวม 81 ครั้ง หรือ 7.910% ไฟล์ counts อยู่ที่ [half_adder_10_qpu_counts.csv](data/half_adder_10_qpu_counts.csv) และข้อมูล Job อยู่ใน [job-dc2kf9mq4uuc73a5fcc0](jobs/job-dc2kf9mq4uuc73a5fcc0/)
 
-![Half Adder 10 transpiled circuit](circuit-dc2kf9mq4uuc73a5fcc0.png)
+![Half Adder 10 transpiled circuit](figures/circuit-dc2kf9mq4uuc73a5fcc0.png)
 
-เพื่อเปรียบเทียบ ได้จำลอง Half Adder ครบทั้ง 4 อินพุตด้วย Qiskit Aer โดยได้ผลลัพธ์ที่คาดหวัง 100% ในทุกกรณี สามารถดูข้อมูลได้จาก [half_adder_simulation.csv](half_adder_simulation.csv)
+เพื่อเปรียบเทียบ ได้จำลอง Half Adder ครบทั้ง 4 อินพุตด้วย Qiskit Aer โดยได้ผลลัพธ์ที่คาดหวัง 100% ในทุกกรณี สามารถดูข้อมูลได้จาก [half_adder_simulation.csv](data/half_adder_simulation.csv)
 
 ## 8. การวิเคราะห์ผล
 
@@ -202,9 +202,9 @@ Job ถูกส่งไปยัง QPU จริง ไม่ใช่ simula
 
 ค่าเฉลี่ยของ physical qubits ที่ใช้ประมาณ **0.931%** และ qubits ทั้งหมดมีสถานะ Operational เป็น Yes ข้อมูล calibration ใช้ประกอบการอธิบายว่าทำไมผลบนเครื่องจริงจึงมี bitstrings อื่นปนกับผลลัพธ์ที่ถูกต้อง
 
-![IBM Kingston calibration map](ibm_kingston_readout_error_cz_calibrations_2026-11-24T03_46_08Z.png)
+![IBM Kingston calibration map](figures/ibm_kingston_readout_error_cz_calibrations_2026-11-24T03_46_08Z.png)
 
-ไฟล์ calibration: [ibm_kingston_calibrations_2026-11-24T03_46_08Z.csv](ibm_kingston_calibrations_2026-11-24T03_46_08Z.csv)
+ไฟล์ calibration: [ibm_kingston_calibrations_2026-11-24T03_46_08Z.csv](data/ibm_kingston_calibrations_2026-11-24T03_46_08Z.csv)
 
 ## 10. สรุปผล
 
@@ -237,7 +237,7 @@ C_{out} = ab + aC_{in} + bC_{in}
 
 ผลลัพธ์ในตารางใช้รูปแบบ (C_{out}Sum) โดยผลจำลองควรได้สถานะที่คาดหวัง 100% ในแต่ละอินพุต เนื่องจากไม่มี noise
 
-ผลจำลองที่สร้างด้วย Qiskit Aer ถูกบันทึกไว้ใน [full_adder_simulation.csv](full_adder_simulation.csv) และใช้สคริปต์ [simulate_adders.py](simulate_adders.py)
+ผลจำลองที่สร้างด้วย Qiskit Aer ถูกบันทึกไว้ใน [full_adder_simulation.csv](data/full_adder_simulation.csv) และใช้สคริปต์ [simulate_adders.py](code/simulate_adders.py)
 
 ## 12. ผลการทดลองเพิ่มเติม: 2-bit Ripple-Carry Adder
 
@@ -252,7 +252,7 @@ C_{out} = ab + aC_{in} + bC_{in}
 
 ผลลัพธ์ข้างต้นเป็นผลจำลองเชิงอุดมคติของวงจร Ripple-Carry โดยแสดงผลในรูปแบบ (Carry_{out}Sum_1Sum_0) การส่ง Carry จากบิตต่ำไปยังบิตสูงเป็นหลักการสำคัญของวงจรชนิดนี้
 
-ข้อมูลผลจำลองถูกบันทึกไว้ใน [ripple_carry_2bit_simulation.csv](ripple_carry_2bit_simulation.csv)
+ข้อมูลผลจำลองถูกบันทึกไว้ใน [ripple_carry_2bit_simulation.csv](data/ripple_carry_2bit_simulation.csv)
 
 ## 13. ข้อจำกัดและงานต่อยอด
 
