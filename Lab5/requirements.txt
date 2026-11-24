@@ -1,0 +1,4 @@
+qiskit>=1.2,<2.0
+qiskit-aer>=0.14,<0.18
+matplotlib>=3.8,<4.0
+pandas>=2.2,<3.0
