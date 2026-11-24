@@ -1,0 +1,3 @@
+A,B,expected_carry_sum1_sum0,state_carry_sum1_sum0,count,probability_percent
+01,11,100,100,1024,100.0
+10,11,101,101,1024,100.0

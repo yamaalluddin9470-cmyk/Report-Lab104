@@ -1,0 +1,54 @@
+{
+  "schema_version": "v2.0",
+  "data": [
+    {
+      "results": {
+        "c": {
+          "data": "eJxtUMENwyAMHKAj5FGp346QURiho3QEqxPklSAUJaeWmfqo+uDTHA4QklpgwPadz1hEm2B59NhbowkEOoN+DoeSnA5xWW4+FQiH1jpexC5sbkx9mBYtoHURUgkQ1nhc0Fa9DAm8AlIfY5o1WTHYT9Gh0+D9V//BTmDrzYDLVOfQjHiAvyWRd8ry6e4J2EW9dvEyxJgLSvJU8cDV89yOVWSvtS4HeHuVAUoiAWTzcIUi5KDHvAfdpB/kC/wABCdrTg==",
+          "shape": [
+            1,
+            1024,
+            4
+          ],
+          "dtype": "bool"
+        }
+      },
+      "metadata": {
+        "scheduler_timing": null,
+        "stretch_values": null
+      }
+    }
+  ],
+  "metadata": {
+    "chunk_timing": [
+      {
+        "start": "2026-11-24T04:31:08.350439",
+        "stop": "2026-11-24T04:31:09.490640",
+        "parts": [
+          {
+            "idx_item": 0,
+            "size": 1,
+            "permutation": [
+              0
+            ],
+            "element_range": [
+              0,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "passthrough_data": {
+    "post_processor": {
+      "context": "sampler_v2",
+      "pub_shapes": [
+        1
+      ],
+      "version": "v1"
+    }
+  },
+  "semantic_role": null
+}

@@ -1,0 +1,58 @@
+{
+  "backend": "ibm_kingston",
+  "created": "2026-11-24T08:15:34.799055Z",
+  "id": "dc2kf9mq4uuc73a5fcc0",
+  "cost": 600,
+  "params": {
+    "options": {
+      "init_qubits": true
+    },
+    "quantum_program": {
+      "shots": 1024,
+      "circuits": {
+        "data": [
+          "OPENQASM 3.0;\ninclude \"stdgates.inc\";\ngate rzz(p0) _gate_q_0, _gate_q_1 {\n  cx _gate_q_0, _gate_q_1;\n  rz(p0) _gate_q_1;\n  cx _gate_q_0, _gate_q_1;\n}\nbit[4] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nrz(pi/2) $2;\nsx $2;\nrz(pi/2) $2;\nx $3;\ncz $3, $2;\ncz $1, $2;\nx $1;\nrzz(pi/4) $1, $0;\nrz(pi/4) $0;\nrx(pi) $0;\nrz(pi/4) $1;\nrx(pi/2) $1;\nrz(-pi/2) $1;\nrx(-pi/2) $2;\nrz(-pi/2) $2;\nsx $3;\ncz $2, $3;\nsx $2;\nsx $3;\ncz $2, $3;\nsx $2;\nsx $3;\ncz $2, $3;\ncz $2, $1;\nrz(pi/2) $1;\nrx(-pi/2) $1;\nrzz(pi/4) $1, $0;\nrz(pi/4) $0;\nrx(-pi/2) $0;\nrz(pi/4) $1;\nrx(pi/2) $1;\nrz(-pi/2) $1;\ncz $2, $1;\nrx(-pi/2) $1;\nrz(-pi/2) $1;\ncz $1, $0;\nsx $0;\nsx $1;\ncz $1, $0;\nsx $0;\nsx $1;\ncz $1, $0;\nx $2;\nrzz(pi/4) $2, $1;\nrz(3*pi/4) $1;\nrx(pi/2) $1;\nrz(pi/2) $1;\nrz(-pi/4) $2;\nx $2;\nc[0] = measure $2;\nc[1] = measure $0;\nc[2] = measure $3;\nc[3] = measure $1;\n"
+        ]
+      },
+      "items": [
+        {
+          "chunk_size": "auto",
+          "circuit_arguments": {
+            "data": "eJwDAAAAAAE=",
+            "dtype": "f64",
+            "shape": [
+              1,
+              0
+            ]
+          },
+          "item_type": "circuit",
+          "shape": [
+            1
+          ]
+        }
+      ],
+      "meas_level": "classified",
+      "passthrough_data": {
+        "post_processor": {
+          "context": "sampler_v2",
+          "pub_shapes": [
+            1
+          ],
+          "version": "v1"
+        }
+      }
+    },
+    "schema_version": "v2.0"
+  },
+  "program": {
+    "id": "executor"
+  },
+  "state": {
+    "status": "Completed"
+  },
+  "status": "Completed",
+  "tags": [
+    "Composer"
+  ],
+  "user_id": "IBMid-6920029A3M"
+}

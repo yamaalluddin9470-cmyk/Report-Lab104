@@ -1,0 +1,58 @@
+{
+  "backend": "ibm_kingston",
+  "created": "2026-11-24T04:31:05.321827Z",
+  "id": "dc2h62anj2vs73dgnoag",
+  "cost": 600,
+  "params": {
+    "options": {
+      "init_qubits": true
+    },
+    "quantum_program": {
+      "circuits": {
+        "data": [
+          "OPENQASM 3.0;\ninclude \"stdgates.inc\";\ngate rzz(p0) _gate_q_0, _gate_q_1 {\n  cx _gate_q_0, _gate_q_1;\n  rz(p0) _gate_q_1;\n  cx _gate_q_0, _gate_q_1;\n}\nbit[4] c;\nrz(pi/2) $20;\nsx $20;\nrz(pi/2) $20;\nrz(pi/2) $21;\nsx $21;\nrz(pi/2) $21;\nx $22;\nx $36;\ncz $36, $21;\ncz $22, $21;\nrx(-pi/2) $21;\nrz(-pi/2) $21;\nrx(-pi/2) $22;\ncz $21, $22;\nsx $21;\nsx $22;\ncz $21, $22;\nsx $21;\nsx $22;\ncz $21, $22;\nrzz(pi/4) $21, $20;\nrz(pi/4) $20;\nrx(pi) $20;\nrz(pi/4) $21;\nrx(pi/2) $21;\nrz(-pi/2) $21;\ncz $36, $21;\nrz(pi/2) $21;\nrx(-pi/2) $21;\nrzz(pi/4) $21, $20;\nrz(pi/4) $20;\nrx(-pi/2) $20;\nrz(pi/4) $21;\nrx(pi/2) $21;\nrz(-pi/2) $21;\ncz $36, $21;\nrx(-pi/2) $21;\nrz(-pi/2) $21;\ncz $21, $20;\nsx $20;\nsx $21;\ncz $21, $20;\nsx $20;\nsx $21;\ncz $21, $20;\nx $36;\nrzz(pi/4) $36, $21;\nrz(3*pi/4) $21;\nrx(pi/2) $21;\nrz(pi/2) $21;\nrz(-pi/4) $36;\nx $36;\nc[0] = measure $36;\nc[1] = measure $20;\nc[2] = measure $22;\nc[3] = measure $21;\n"
+        ]
+      },
+      "items": [
+        {
+          "item_type": "circuit",
+          "shape": [
+            1
+          ],
+          "chunk_size": "auto",
+          "circuit_arguments": {
+            "data": "eJwDAAAAAAE=",
+            "dtype": "f64",
+            "shape": [
+              1,
+              0
+            ]
+          }
+        }
+      ],
+      "meas_level": "classified",
+      "passthrough_data": {
+        "post_processor": {
+          "context": "sampler_v2",
+          "pub_shapes": [
+            1
+          ],
+          "version": "v1"
+        }
+      },
+      "shots": 1024
+    },
+    "schema_version": "v2.0"
+  },
+  "program": {
+    "id": "executor"
+  },
+  "state": {
+    "status": "Completed"
+  },
+  "status": "Completed",
+  "tags": [
+    "Composer"
+  ],
+  "user_id": "IBMid-6920029A3M"
+}
