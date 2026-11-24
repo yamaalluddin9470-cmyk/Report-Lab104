@@ -3,6 +3,8 @@
 **Course:** SCI-104 – Mathematical Foundations and Quantum Mechanics Essentials  
 **Institution:** Prince of Songkla University, Phuket Campus
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab6/lab-6-quantum-fourier-transform.ipynb)
+
 | Field | Detail |
 |---|---|
 | Lab | Lab 6 – Quantum Fourier Transform (QFT) |
@@ -12,7 +14,7 @@
 | Instructor | Komsan Kanjanasit |
 | Date Performed | To be completed |
 | Date Submitted | To be completed |
-| Colab Notebook | To be completed |
+| Colab Notebook | [Open in Google Colab](https://colab.research.google.com/github/yamaalluddin9470-cmyk/Report-Lab104/blob/main/Lab6/lab-6-quantum-fourier-transform.ipynb) |
 
 ---
 
